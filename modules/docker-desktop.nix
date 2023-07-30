@@ -24,7 +24,7 @@ with builtins; with lib; {
         description = "Docker Desktop proxy";
         path = [ pkgs.mount ];
         script = ''
-          ${config.wsl.wslConf.automount.root}/wsl/docker-desktop/docker-desktop-user-distro proxy --docker-desktop-root ${config.wsl.wslConf.automount.root}/wsl/docker-desktop "C:\Program Files\Docker\Docker\resources\bin"
+          ${config.wsl.wslConf.automount.root}/wsl/docker-desktop/docker-desktop-user-distro proxy --docker-desktop-root ${config.wsl.wslConf.automount.root}/wsl/docker-desktop "C:\Program Files\Docker\Docker\resources"
         '';
         wantedBy = [ "multi-user.target" ];
         serviceConfig = {
